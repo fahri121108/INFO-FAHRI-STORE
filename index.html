@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAHRI STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* STYLE TOMBOL BERWARNA */
+        .btn-blue {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.85), rgba(59,  130, 246, 0.85));
+            border: 2px solid rgba(96, 165, 250, 0.6);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-blue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.45);
+        }
+        
+        .btn-red {
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.85), rgba(239, 68, 68, 0.85));
+            border: 2px solid rgba(248, 113, 113, 0.6);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-red:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.45);
+        }
+        
+        .btn-green {
+            background: linear-gradient(135deg, rgba(21, 128, 61, 0.85), rgba(34, 197, 94, 0.85));
+            border: 2px solid rgba(74, 222, 128, 0.6);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-green:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
+        }
+        
+        .btn-purple {
+            background: linear-gradient(135deg, rgba(76, 29, 149, 0.85), rgba(124, 58, 237, 0.85));
+            border: 2px solid rgba(167, 139, 250, 0.6);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-purple:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+        }
+        
+        .btn-orange {
+            background: linear-gradient(135deg, rgba(194, 65, 12, 0.85), rgba(249, 115, 22, 0.85));
+            border: 2px solid rgba(251, 146, 60, 0.6);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+        }
+        
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            font-size: 12px;
+            margin-left: 6px;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        
+        .social-icon {
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #93c5fd;
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="content px-4 py-6 max-w-md mx-auto min-h-screen flex flex-col">
+        <!-- TOMBOL KEMBALI -->
+        <div class="flex items-center mb-6">
+            <button class="text-white/80 text-lg hover:text-white transition">
+                <i class="fa fa-arrow-left"></i>
+            </button>
+        </div>
+        
+        <!-- BAGIAN PROFIL -->
+        <div class="flex flex-col items-center mb-8">
+            <img src="profil.jpg" alt="FAHRI STORE" class="w-28 h-28 rounded-full object-cover border-4 border-blue-400/50 mb-4 shadow-lg shadow-blue-500/30">
+            <div class="flex items-center text-xl font-bold">
+                FAHRI STORE
+                <span class="verified-badge">
+                    <i class="fa fa-check text-white text-xs"></i>
+                </span>
+            </div>
+            
+            <!-- IKON SOSMED -->
+            <div class="flex items-center gap-6 mt-4">
+                <a href="@storebyfahri" target="_blank" class="social-icon text-2xl">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="@storebyfahri" target="_blank" class="social-icon text-2xl">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+                <a href="@storebyfahri" target="_blank" class="social-icon text-2xl">
+                    <i class="fa fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- TOMBOL LINK WARNA WARNI -->
+        <div class="space-y-3.5 flex-1">
+            <a href="https://wa.me/6283138272645" target="_blank" class="btn-blue block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                💬 WA ADMIN FAHRI STORE
+            </a>
+            
+            <a href="https://wa.me/6289531746761" target="_blank" class="btn-red block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                💬 WA ADMIN FAHRI STORE BACKUP
+            </a>
+            
+            <a href="https://chat.whatsapp.com/K0k2i0z8cXhF9mfTZzobDe?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="btn-green block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                👥 GRUP JB ROBLOX
+            </a>
+            
+            <a href="https://chat.whatsapp.com/FbdqLBFjn2XJl99GcklojO?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="btn-orange block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                🥚 GRUP JOKI STEAL A EGGS
+            </a>
+            
+            <a href="https://whatsapp.com/channel/0029Vb89i0zInlqP8pH6FR2T" target="_blank" class="btn-purple block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                📢 SALURAN INFO FAHRI STORE
+            </a>
+            
+            <a href="https://whatsapp.com/channel/0029Vb8gXGtFnSz9MuXnnv0j" target="_blank" class="btn-blue block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                ⭐ SALURAN TESTI FAHRI STORE
+            </a>
+            
+            <a href="@storebyfahri" target="_blank" class="btn-red block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                🎵 TIKTOK FAHRI STORE
+            </a>
+            
+            <a href="@storebyfahri" target="_blank" class="btn-purple block w-full py-3 px-4 rounded-lg text-center font-semibold">
+                📷 IG FAHRI STORE
+            </a>
+        </div>
+        
+        <!-- HAK CIPTA -->
+        <div class="mt-10 mb-4 text-center">
+            <p class="copyright">© 2026 FAHRI STORE — All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
